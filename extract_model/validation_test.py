@@ -1,12 +1,12 @@
 import numpy as np
 import onnxruntime as ort
 
-# test ONNXRuntime functions
+# ONNXRuntime functions
 session = ort.InferenceSession('F:/kjYun/2022/07_onnx/mxnet_exported_resnet18.onnx',  providers=['CPUExecutionProvider'])
 session_div1 = ort.InferenceSession('F:/kjYun/2022/07_onnx/test1.onnx',  providers=['CPUExecutionProvider'])
 session_div2 = ort.InferenceSession('F:/kjYun/2022/07_onnx/test2.onnx',  providers=['CPUExecutionProvider'])
 
-# 테스트를 해보고 싶은 함수
+# Validate extract_function
 def extract_func(x, y, z):
     input_name = x.get_inputs()[0].name
     input_shape = x.get_inputs()[0].shape
@@ -35,6 +35,6 @@ def extract_func(x, y, z):
     # 10의 -6승까지 비교
     return np.count_nonzero((np.abs(result[0]-result2[0])>0.000001).astype(int));
 
-# 테스트 함수
+# test
 def test_answer():
     assert extract_func(session, session_div1, session_div2) == 0
