@@ -2,9 +2,9 @@ import numpy as np
 import onnxruntime as ort
 
 # ONNXRuntime functions
-session = ort.InferenceSession('F:/kjYun/2022/07_onnx/mxnet_exported_resnet18.onnx',  providers=['CPUExecutionProvider'])
-session_div1 = ort.InferenceSession('F:/kjYun/2022/07_onnx/test1.onnx',  providers=['CPUExecutionProvider'])
-session_div2 = ort.InferenceSession('F:/kjYun/2022/07_onnx/test2.onnx',  providers=['CPUExecutionProvider'])
+session = ort.InferenceSession('mxnet_exported_resnet18.onnx',  providers=['CPUExecutionProvider'])
+session_div1 = ort.InferenceSession('test1.onnx',  providers=['CPUExecutionProvider'])
+session_div2 = ort.InferenceSession('test2.onnx',  providers=['CPUExecutionProvider'])
 
 # Validate extract_function
 def extract_func(x, y, z):
