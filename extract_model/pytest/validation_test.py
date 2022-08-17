@@ -71,13 +71,13 @@ def compare_inputType(session, session_div1):
     return session.get_inputs()[0].type, session_div1.get_inputs()[0].type
 
 def compare_outputName(session, session_div2):
-    return session.get_outputs()[0].name, session_div1.get_outputs()[0].name
+    return session.get_outputs()[0].name, session_div2.get_outputs()[0].name
 
 def compare_outputShape(session, session_div2):
-    return session.get_outputs()[0].shape, session_div1.get_outputs()[0].shape
+    return session.get_outputs()[0].shape, session_div2.get_outputs()[0].shape
 
 def compare_outputType(session, session_div2):
-    return session.get_outputs()[0].type, session_div1.get_outputs()[0].type
+    return session.get_outputs()[0].type, session_div2.get_outputs()[0].type
 
 # ------------------------------------------------------------------------------------------
 # Function Test
