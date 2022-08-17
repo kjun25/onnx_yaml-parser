@@ -1,0 +1,226 @@
+---
+GlowToolsVersion: 2020-10-02
+...
+---
+GraphPreLowerHash: 0x6274431C239E5185
+...
+---
+- NodeOutputName:  '_defaultpreprocess0_broadcast_div0:0'
+  Min:             -2.1179039478302001953125
+  Max:             2.639999866485595703125
+  Histogram:       [ 3141, 4009, 6343, 9244, 10423, 10833, 9971, 7609,
+                     6809, 82146 ]
+- NodeOutputName:  '_defaultpreprocess0_broadcast_minus0:0'
+  Min:             -123.6750030517578125
+  Max:             151.470001220703125
+  Histogram:       [ 3028, 3958, 6236, 8952, 10561, 10888, 10121, 7640,
+                     6527, 82617 ]
+- NodeOutputName:  'broadcast__defaultpreprocess0_init_mean_tile2__2_constfold:0'
+  Min:             103.529998779296875
+  Max:             123.6750030517578125
+  Histogram:       [ 50176, 0, 0, 0, 0, 0, 50176, 0, 0, 50176 ]
+- NodeOutputName:  'broadcast__defaultpreprocess0_init_scale_tile2__2_constfold:0'
+  Min:             57.119998931884765625
+  Max:             58.395000457763671875
+  Histogram:       [ 50176, 0, 50176, 0, 0, 0, 0, 0, 0, 50176 ]
+- NodeOutputName:  'conv_bias:0'
+  Min:             -0.95773375034332275390625
+  Max:             0.7873032093048095703125
+  Histogram:       [ 2, 1, 0, 10, 9, 20, 10, 5, 5, 2 ]
+- NodeOutputName:  'conv_bias__10:0'
+  Min:             -0.92655551433563232421875
+  Max:             1.0121638774871826171875
+  Histogram:       [ 1, 0, 1, 13, 170, 59, 7, 4, 0, 1 ]
+- NodeOutputName:  'conv_bias__15:0'
+  Min:             -0.4400691092014312744140625
+  Max:             4.275578975677490234375
+  Histogram:       [ 37, 226, 219, 28, 1, 0, 0, 0, 0, 1 ]
+- NodeOutputName:  'conv_bias__20:0'
+  Min:             -0.687488079071044921875
+  Max:             0.554987490177154541015625
+  Histogram:       [ 2, 1, 2, 0, 1, 12, 21, 11, 9, 5 ]
+- NodeOutputName:  'conv_bias__21:0'
+  Min:             -0.518458187580108642578125
+  Max:             1.5224659442901611328125
+  Histogram:       [ 2, 3, 5, 15, 13, 4, 18, 1, 1, 2 ]
+- NodeOutputName:  'conv_bias__22:0'
+  Min:             -1.03899109363555908203125
+  Max:             1.266126155853271484375
+  Histogram:       [ 2, 0, 2, 7, 14, 11, 18, 5, 2, 3 ]
+- NodeOutputName:  'conv_bias__23:0'
+  Min:             -0.4961403310298919677734375
+  Max:             1.17996394634246826171875
+  Histogram:       [ 1, 3, 6, 10, 12, 12, 9, 4, 6, 1 ]
+- NodeOutputName:  'conv_bias__24:0'
+  Min:             -0.8692824840545654296875
+  Max:             0.937795221805572509765625
+  Histogram:       [ 1, 0, 2, 12, 45, 55, 8, 3, 1, 1 ]
+- NodeOutputName:  'conv_bias__25:0'
+  Min:             -0.56410396099090576171875
+  Max:             0.81933891773223876953125
+  Histogram:       [ 2, 1, 3, 16, 64, 34, 5, 2, 0, 1 ]
+- NodeOutputName:  'conv_bias__26:0'
+  Min:             -0.99635183811187744140625
+  Max:             1.0132958889007568359375
+  Histogram:       [ 1, 1, 2, 9, 32, 44, 24, 10, 3, 2 ]
+- NodeOutputName:  'conv_bias__27:0'
+  Min:             -1.0434467792510986328125
+  Max:             0.63255250453948974609375
+  Histogram:       [ 1, 0, 2, 2, 6, 25, 54, 24, 9, 5 ]
+- NodeOutputName:  'conv_bias__28:0'
+  Min:             -0.53267729282379150390625
+  Max:             0.29322278499603271484375
+  Histogram:       [ 2, 1, 5, 6, 39, 62, 78, 50, 10, 3 ]
+- NodeOutputName:  'conv_bias__29:0'
+  Min:             -0.559272587299346923828125
+  Max:             0.7108252048492431640625
+  Histogram:       [ 4, 5, 10, 35, 66, 71, 34, 21, 7, 3 ]
+- NodeOutputName:  'conv_bias__30:0'
+  Min:             -0.7004110813140869140625
+  Max:             0.739547073841094970703125
+  Histogram:       [ 1, 1, 3, 7, 40, 98, 75, 21, 9, 1 ]
+- NodeOutputName:  'conv_bias__31:0'
+  Min:             -0.64048111438751220703125
+  Max:             0.769089281558990478515625
+  Histogram:       [ 4, 3, 17, 33, 73, 69, 27, 19, 9, 2 ]
+- NodeOutputName:  'conv_bias__32:0'
+  Min:             -0.636875450611114501953125
+  Max:             0.1447805464267730712890625
+  Histogram:       [ 1, 1, 2, 9, 47, 129, 165, 111, 38, 9 ]
+- NodeOutputName:  'conv_bias__33:0'
+  Min:             -0.413211882114410400390625
+  Max:             0.636792659759521484375
+  Histogram:       [ 6, 22, 62, 141, 148, 91, 34, 6, 0, 2 ]
+- NodeOutputName:  'conv_bias__34:0'
+  Min:             -1.3365514278411865234375
+  Max:             0.71361386775970458984375
+  Histogram:       [ 1, 0, 0, 1, 1, 7, 109, 308, 75, 10 ]
+- NodeOutputName:  'conv_bias__35:0'
+  Min:             -0.218252658843994140625
+  Max:             0.434595644474029541015625
+  Histogram:       [ 1, 1, 1, 1, 12, 73, 179, 172, 54, 18 ]
+- NodeOutputName:  'conv_bias__5:0'
+  Min:             -0.387254297733306884765625
+  Max:             0.91657435894012451171875
+  Histogram:       [ 6, 19, 29, 45, 18, 7, 0, 2, 1, 1 ]
+- NodeOutputName:  'data:0'
+  Min:             0.0
+  Max:             255.0
+  Histogram:       [ 3487, 3719, 5891, 8217, 10508, 10685, 10309, 7935,
+                     6165, 83612 ]
+- NodeOutputName:  'flatten_175__1:0'
+  Min:             0.0
+  Max:             6.384282588958740234375
+  Histogram:       [ 329, 127, 40, 10, 3, 2, 0, 0, 0, 1 ]
+- NodeOutputName:  'resnetv10_conv0_fwd__2:0'
+  Min:             -2.5147411823272705078125
+  Max:             2.8049938678741455078125
+  Histogram:       [ 86, 7462, 28804, 37811, 391718, 303982, 29846, 2473,
+                     568, 66 ]
+- NodeOutputName:  'resnetv10_conv0_weight__1:0'
+  Min:             -0.2209531962871551513671875
+  Max:             0.2220481932163238525390625
+  Histogram:       [ 5, 13, 54, 263, 5163, 3597, 248, 46, 12, 7 ]
+- NodeOutputName:  'resnetv10_dense0_bias:0'
+  Min:             -0.042326338589191436767578125
+  Max:             0.04346545040607452392578125
+  Histogram:       [ 5, 18, 79, 185, 250, 217, 149, 60, 27, 10 ]
+- NodeOutputName:  'resnetv10_dense0_fwd:0'
+  Min:             -5.33627986907958984375
+  Max:             10.038188934326171875
+  Histogram:       [ 11, 77, 267, 342, 217, 63, 18, 2, 1, 2 ]
+- NodeOutputName:  'resnetv10_dense0_fwd_TransposeB:0'
+  Min:             -0.2660667002201080322265625
+  Max:             0.808378517627716064453125
+  Histogram:       [ 261, 86400, 356026, 55883, 9538, 2693, 868, 247, 65,
+                     19 ]
+- NodeOutputName:  'resnetv10_dense0_fwd__2:0'
+  Min:             -5.33627986907958984375
+  Max:             10.038188934326171875
+  Histogram:       [ 11, 77, 267, 342, 217, 63, 18, 2, 1, 2 ]
+- NodeOutputName:  'resnetv10_dense0_fwd__2_bias:0'
+  Min:             -5.33627986907958984375
+  Max:             10.038188934326171875
+  Histogram:       [ 11, 77, 267, 342, 217, 63, 18, 2, 1, 2 ]
+- NodeOutputName:  'resnetv10_dense0_fwd__2_dot:0'
+  Min:             -5.345834255218505859375
+  Max:             10.0170192718505859375
+  Histogram:       [ 11, 75, 267, 342, 218, 64, 18, 2, 1, 2 ]
+- NodeOutputName:  'resnetv10_dense0_weight:0'
+  Min:             -0.2660667002201080322265625
+  Max:             0.808378517627716064453125
+  Histogram:       [ 261, 86400, 356026, 55883, 9538, 2693, 868, 247, 65,
+                     19 ]
+- NodeOutputName:  'resnetv10_pool0_fwd__1:0'
+  Min:             0.0
+  Max:             2.8049938678741455078125
+  Histogram:       [ 124230, 45053, 20703, 5568, 3518, 875, 512, 147, 65,
+                     33 ]
+- NodeOutputName:  'resnetv10_pool1_fwd__1:0'
+  Min:             0.0
+  Max:             6.384282588958740234375
+  Histogram:       [ 329, 127, 40, 10, 3, 2, 0, 0, 0, 1 ]
+- NodeOutputName:  'resnetv10_relu0_fwd__1:0'
+  Min:             0.0
+  Max:             2.8049938678741455078125
+  Histogram:       [ 605307, 140110, 41428, 6333, 7845, 975, 641, 108,
+                     45, 24 ]
+- NodeOutputName:  'resnetv10_relu0_fwd__1_max:0'
+  Min:             0.0
+  Max:             2.8049938678741455078125
+  Histogram:       [ 605307, 140110, 41428, 6333, 7845, 975, 641, 108,
+                     45, 24 ]
+- NodeOutputName:  'resnetv10_stage1__plus0__1:0'
+  Min:             -4.40607452392578125
+  Max:             4.846953868865966796875
+  Histogram:       [ 36, 203, 1345, 7866, 75823, 100766, 13710, 868, 84,
+                     3 ]
+- NodeOutputName:  'resnetv10_stage1__plus1__1:0'
+  Min:             -4.273229122161865234375
+  Max:             5.95215892791748046875
+  Histogram:       [ 13, 184, 1872, 33583, 120340, 41852, 2582, 247, 29,
+                     2 ]
+- NodeOutputName:  'resnetv10_stage1_activation0__1:0'
+  Min:             0.0
+  Max:             4.846953868865966796875
+  Histogram:       [ 125023, 49234, 21269, 3811, 921, 339, 88, 14, 4, 1 ]
+- NodeOutputName:  'resnetv10_stage1_activation0__1_max:0'
+  Min:             0.0
+  Max:             4.846953868865966796875
+  Histogram:       [ 125023, 49234, 21269, 3811, 921, 339, 88, 14, 4, 1 ]
+- NodeOutputName:  'resnetv10_stage1_activation1__1:0'
+  Min:             0.0
+  Max:             5.95215892791748046875
+  Histogram:       [ 127568, 56780, 12916, 2582, 636, 158, 47, 14, 1, 2 ]
+- NodeOutputName:  'resnetv10_stage1_activation1__1_max:0'
+  Min:             0.0
+  Max:             5.95215892791748046875
+  Histogram:       [ 127568, 56780, 12916, 2582, 636, 158, 47, 14, 1, 2 ]
+- NodeOutputName:  'resnetv10_stage1_conv0_fwd__2:0'
+  Min:             -7.355127811431884765625
+  Max:             2.35562896728515625
+  Histogram:       [ 12, 27, 61, 185, 881, 2849, 17210, 161410, 17997,
+                     72 ]
+- NodeOutputName:  'resnetv10_stage1_conv0_weight__1:0'
+  Min:             -0.54553043842315673828125
+  Max:             0.3302974998950958251953125
+  Histogram:       [ 3, 4, 19, 108, 400, 4913, 30786, 561, 63, 7 ]
+- NodeOutputName:  'resnetv10_stage1_conv1_fwd__2:0'
+  Min:             -4.40607452392578125
+  Max:             3.29909992218017578125
+  Histogram:       [ 30, 127, 705, 3261, 18881, 98477, 72080, 6819, 294,
+                     30 ]
+- NodeOutputName:  'resnetv10_stage1_conv1_weight__1:0'
+  Min:             -1.07748889923095703125
+  Max:             0.810361087322235107421875
+  Histogram:       [ 2, 7, 26, 132, 1379, 29883, 5149, 252, 30, 4 ]
+- NodeOutputName:  'resnetv10_stage1_conv2_fwd__2:0'
+  Min:             -3.461440563201904296875
+  Max:             1.70702230930328369140625
+  Histogram:       [ 9, 116, 574, 2853, 11525, 39729, 107190, 37134, 1518,
+                     56 ]
+- NodeOutputName:  'resnetv10_stage1_conv2_weight__1:0'
+  Min:             -0.23458717763423919677734375
+  Max:             0.24305854737758636474609375
+  Histogram:       [ 4, 15, 89, 1177, 22455, 12615, 476, 27, 5, 1 ]
+...
