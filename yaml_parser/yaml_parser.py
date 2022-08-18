@@ -67,14 +67,16 @@ with open(yamlFile, "r") as stream:
     for item in data:
         for i in item:
             if "NodeOutputName" in i:
-                if i["NodeOutputName"].split("__")[0] == nodeOutputName:
-                    entry = i
+                splitValue = i["NodeOutputName"].split("__")[0]
+                if splitValue == nodeOutputName:
+                    entry = splitValue
                     print(entry)
     if not entry:
         print('Node value "%s" not found!' % nodeOutputName)
         exit(1)
 
 print("Input onnx file path: " + onnxFile, "Output extracted onnx file path" + extractedOnnxFile, sep=", ")
-print("Input node name: " + nodeInputName, "Output node name: " + nodeOutputName, sep=", ")
+print("Input node name: " + nodeInputName, "Output node name: " + entry, sep=", ")
 
-onnx.utils.extract_model(onnxFile, extractedOnnxFile, nodeInputName, nodeOutputName)
+# Extract onnx model.
+onnx.utils.extract_model(onnxFile, extractedOnnxFile, nodeInputName, entry)
