@@ -48,3 +48,15 @@ yamlProject  (package)
         |           |      |----- partition2_2.onnx
         
 ```
+Plz Fix
+```
+utils.py
+
+159    def extract_model(
+160            input_path: str,
+161            output_path: str,
+162            input_names: List[str],
+163            output_names: List[str],
+164            check_model: bool = False, //[original] check_model: bool = True, 
+165    ) -> None:
+```
