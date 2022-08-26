@@ -54,7 +54,7 @@ def extract_model(onnx_path, yaml_dir_path, save_dir_path):
     print('Reading YAML file "%s"' % file_list_yaml)
     data = None
     for file in file_list_yaml:
-        with open(file, "r") as stream:
+        with open(yaml_dir_path + file, "r") as stream:
             try:
                 data = yaml.safe_load_all(stream)
                 print(file)
@@ -112,7 +112,7 @@ def read_onnx(onnx_path, extracted_onnx_path):
     # ONNXRuntime functions
 
     for file in file_list_onnx:
-        sess = ort.InferenceSession(file, providers=['CPUExecutionProvider'])
+        sess = ort.InferenceSession(extracted_onnx_path + file, providers=['CPUExecutionProvider'])
         sessions.append(sess)
 
     result_data = []
