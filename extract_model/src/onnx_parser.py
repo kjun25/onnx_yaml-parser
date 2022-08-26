@@ -112,19 +112,19 @@ def read_onnx(onnx_path, extracted_onnx_path):
     # ONNXRuntime functions
 
     for file in file_list_onnx:
-        session = ort.InferenceSession(file, providers=['CPUExecutionProvider'])
-        sessions.append(session)
+        sess = ort.InferenceSession(file, providers=['CPUExecutionProvider'])
+        sessions.append(sess)
 
     result_data = []
-    for session in sessions:
-        if sessions.index(session) == 1:
-            input_name = session.get_inputs()[0].name
-            output_name = session.get_outputs()[0].name
-            result_data = session.run([output_name], {input_name: data})
+    for sess in sessions:
+        if sessions.index(sess) == 0:
+            input_name = sess.get_inputs()[0].name
+            output_name = sess.get_outputs()[0].name
+            result_data = sess.run([output_name], {input_name: data})
         else:
-            input_name = session.get_inputs()[0].name
-            output_name = session.get_outputs()[0].name
-            result_data = session.run([output_name], {input_name: result_data})
+            input_name = sess.get_inputs()[0].name
+            output_name = sess.get_outputs()[0].name
+            result_data = sess.run([output_name], {input_name: result_data[0]})
 
     return result, result_data
 
@@ -139,7 +139,9 @@ def main(args):
     extract_model(args.onnx_file, args.yaml_dir, args.save_dir)
 
     # Read ONNX models
-    read_onnx(args.onnx_file, args.save_dir)
+    res1, res2 = read_onnx(args.onnx_file, args.save_dir)
+
+    print(np.count_nonzero((np.abs(res1[0] - res2[0]) > 0.000001).astype(int)) == 0)
 
 
 if __name__ == '__main__':
