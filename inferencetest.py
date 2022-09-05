@@ -4,7 +4,7 @@ import onnxruntime as ort
 import argparse
 
 
-# Usage 
+# Usage
 # --onnx ./org/resnet50-v2-7.onnx --image ./org/cat_285.png
 def parse_args():
     parser = argparse.ArgumentParser(description='Inference in onnx model')
@@ -41,12 +41,11 @@ def softmax(a):
 
 def main(args):
     img = cv2.imread(args.image).astype(np.float32)
-    print("original Image.shape: ", img.shape)
 
     # [height, width, channel] → [channel, height, width]
     img = img.transpose((2, 0, 1))
     img = np.expand_dims(img, axis=0)
-    print("transposed Image.shape: ", img.shape)
+    print("input Image.shape: ", img.shape)
 
     session = ort.InferenceSession(args.onnx, providers=['CPUExecutionProvider'])
 
@@ -54,9 +53,13 @@ def main(args):
     output_name = session.get_outputs()[0].name
 
     out = session.run([output_name], {input_name: img})[0]
+    result = softmax(out[0])
+    print("sum of softmax value: ", sum(softmax(out[0])))
+    sortedOutput = np.sort(result)
 
-    print("the argmax is \"%s\" in ONNXRuntime" % np.argmax(out))
-    print("the softmax is \"%s\" in ONNXRuntime" % softmax(out))
+    for i in range(5):
+        string = 'Top{i}: softmax[{softmax}], index{index}'.format(i=i+1, softmax=round(sortedOutput[i], 17), index=np.where(result == sortedOutput[i])[0])
+        print(string)
 
 
 if __name__ == '__main__':
