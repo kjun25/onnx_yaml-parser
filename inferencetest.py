@@ -4,8 +4,8 @@ import onnxruntime as ort
 import argparse
 
 
-#Usage 
-#--onnx ./org/resnet50-v2-7.onnx --image ./org/cat_285.png
+# Usage 
+# --onnx ./org/resnet50-v2-7.onnx --image ./org/cat_285.png
 def parse_args():
     parser = argparse.ArgumentParser(description='Inference in onnx model')
 
