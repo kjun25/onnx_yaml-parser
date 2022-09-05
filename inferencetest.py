@@ -55,10 +55,10 @@ def main(args):
     out = session.run([output_name], {input_name: img})[0]
     result = softmax(out[0])
     print("sum of softmax value: ", sum(softmax(out[0])))
-    sortedOutput = np.sort(result)
+    sortedOutput = np.sort(result)[::-1]
 
     for i in range(5):
-        string = 'Top{i}: softmax[{softmax}], index{index}'.format(i=i+1, softmax=round(sortedOutput[i], 17), index=np.where(result == sortedOutput[i])[0])
+        string = 'Top{i}: softmax[{softmax}], index{index}'.format(i=i+1, softmax=round(sortedOutput[i], 3), index=np.where(result == sortedOutput[i])[0])
         print(string)
 
 
