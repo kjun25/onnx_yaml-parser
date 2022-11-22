@@ -89,9 +89,12 @@ def extract_model(onnx_path, yaml_dir_path, save_dir_path):
             output_names = [m]
             print(input_names)
             print(output_names)
-
-            onnx.utils.extract_model(onnx_path, save_dir_path + file.split(".yaml")[0] + '.onnx',
-                                     input_names, output_names)
+            try:
+                onnx.utils.extract_model(onnx_path, save_dir_path + file.split(".yaml")[0] + '.onnx',
+                                         input_names, output_names)
+            except onnx.onnx_cpp2py_export.checker.ValidationError as e:
+                print("pass validation error during exporting.")
+                pass
 
 
 def read_onnx(onnx_path, extracted_onnx_path):
