@@ -1,0 +1,364 @@
+---
+GlowToolsVersion: 2020-10-02
+...
+---
+GraphPreLowerHash: 0x6274431C239E5185
+...
+---
+- NodeOutputName:  'flatten_175__1:0'
+  Min:             0.0
+  Max:             6.384282588958740234375
+  Histogram:       [ 329, 127, 40, 10, 3, 2, 0, 0, 0, 1 ]
+- NodeOutputName:  'resnetv10_dense0_bias:0'
+  Min:             -0.042326338589191436767578125
+  Max:             0.04346545040607452392578125
+  Histogram:       [ 5, 18, 79, 185, 250, 217, 149, 60, 27, 10 ]
+- NodeOutputName:  'resnetv10_dense0_fwd:0'
+  Min:             -5.33627986907958984375
+  Max:             10.038188934326171875
+  Histogram:       [ 11, 77, 267, 342, 217, 63, 18, 2, 1, 2 ]
+- NodeOutputName:  'resnetv10_dense0_fwd_TransposeB:0'
+  Min:             -0.2660667002201080322265625
+  Max:             0.808378517627716064453125
+  Histogram:       [ 261, 86400, 356026, 55883, 9538, 2693, 868, 247, 65,
+                     19 ]
+- NodeOutputName:  'resnetv10_dense0_fwd__2:0'
+  Min:             -5.33627986907958984375
+  Max:             10.038188934326171875
+  Histogram:       [ 11, 77, 267, 342, 217, 63, 18, 2, 1, 2 ]
+- NodeOutputName:  'resnetv10_dense0_fwd__2_bias:0'
+  Min:             -5.33627986907958984375
+  Max:             10.038188934326171875
+  Histogram:       [ 11, 77, 267, 342, 217, 63, 18, 2, 1, 2 ]
+- NodeOutputName:  'resnetv10_dense0_fwd__2_dot:0'
+  Min:             -5.345834255218505859375
+  Max:             10.0170192718505859375
+  Histogram:       [ 11, 75, 267, 342, 218, 64, 18, 2, 1, 2 ]
+- NodeOutputName:  'resnetv10_dense0_weight:0'
+  Min:             -0.2660667002201080322265625
+  Max:             0.808378517627716064453125
+  Histogram:       [ 261, 86400, 356026, 55883, 9538, 2693, 868, 247, 65,
+                     19 ]
+- NodeOutputName:  'resnetv10_pool1_fwd__1:0'
+  Min:             0.0
+  Max:             6.384282588958740234375
+  Histogram:       [ 329, 127, 40, 10, 3, 2, 0, 0, 0, 1 ]
+- NodeOutputName:  'resnetv10_stage1_activation1__1_max:0'
+  Min:             0.0
+  Max:             5.95215892791748046875
+  Histogram:       [ 127568, 56780, 12916, 2582, 636, 158, 47, 14, 1, 2 ]
+- NodeOutputName:  'resnetv10_stage2__plus0__1:0'
+  Min:             -3.1520845890045166015625
+  Max:             6.035999298095703125
+  Histogram:       [ 27, 1065, 22548, 67683, 8792, 225, 10, 1, 0, 1 ]
+- NodeOutputName:  'resnetv10_stage2__plus1__1:0'
+  Min:             -3.0715878009796142578125
+  Max:             5.959978580474853515625
+  Histogram:       [ 68, 929, 17586, 70835, 10488, 408, 31, 6, 0, 1 ]
+- NodeOutputName:  'resnetv10_stage2_activation0__1:0'
+  Min:             0.0
+  Max:             6.035999298095703125
+  Histogram:       [ 93782, 6044, 450, 66, 7, 1, 1, 0, 0, 1 ]
+- NodeOutputName:  'resnetv10_stage2_activation0__1_max:0'
+  Min:             0.0
+  Max:             6.035999298095703125
+  Histogram:       [ 93782, 6044, 450, 66, 7, 1, 1, 0, 0, 1 ]
+- NodeOutputName:  'resnetv10_stage2_activation1__1:0'
+  Min:             0.0
+  Max:             5.959978580474853515625
+  Histogram:       [ 91383, 7950, 857, 129, 20, 10, 2, 0, 0, 1 ]
+- NodeOutputName:  'resnetv10_stage2_activation1__1_max:0'
+  Min:             0.0
+  Max:             5.959978580474853515625
+  Histogram:       [ 91383, 7950, 857, 129, 20, 10, 2, 0, 0, 1 ]
+- NodeOutputName:  'resnetv10_stage2_conv0_fwd__2:0'
+  Min:             -3.2811832427978515625
+  Max:             2.6629016399383544921875
+  Histogram:       [ 3, 8, 81, 1487, 17552, 69459, 11206, 532, 20, 4 ]
+- NodeOutputName:  'resnetv10_stage2_conv0_weight__1:0'
+  Min:             -0.19011457264423370361328125
+  Max:             0.186677992343902587890625
+  Histogram:       [ 2, 8, 127, 1461, 32227, 38130, 1602, 153, 10, 8 ]
+- NodeOutputName:  'resnetv10_stage2_conv1_fwd__2:0'
+  Min:             -2.5197460651397705078125
+  Max:             4.579153537750244140625
+  Histogram:       [ 32, 788, 15931, 69463, 13544, 545, 39, 7, 1, 2 ]
+- NodeOutputName:  'resnetv10_stage2_conv1_weight__1:0'
+  Min:             -0.53918850421905517578125
+  Max:             0.72789371013641357421875
+  Histogram:       [ 6, 50, 730, 21923, 121977, 2506, 225, 30, 5, 4 ]
+- NodeOutputName:  'resnetv10_stage2_conv2_fwd__2:0'
+  Min:             -1.8159663677215576171875
+  Max:             1.84785556793212890625
+  Histogram:       [ 8, 37, 435, 5189, 54796, 37137, 2581, 156, 12, 1 ]
+- NodeOutputName:  'resnetv10_stage2_conv2_weight__1:0'
+  Min:             -0.450302183628082275390625
+  Max:             0.6479256153106689453125
+  Histogram:       [ 9, 23, 95, 2401, 5551, 91, 10, 10, 0, 2 ]
+- NodeOutputName:  'resnetv10_stage2_conv3_fwd__2:0'
+  Min:             -2.387876033782958984375
+  Max:             3.2888753414154052734375
+  Histogram:       [ 19, 529, 7942, 49884, 39413, 2399, 151, 12, 2, 1 ]
+- NodeOutputName:  'resnetv10_stage2_conv3_weight__1:0'
+  Min:             -0.426783084869384765625
+  Max:             0.495753705501556396484375
+  Histogram:       [ 1, 3, 109, 3368, 134552, 9159, 236, 22, 5, 1 ]
+- NodeOutputName:  'resnetv10_stage2_conv4_fwd__2:0'
+  Min:             -3.4545879364013671875
+  Max:             3.5663814544677734375
+  Histogram:       [ 11, 115, 812, 8816, 60610, 29209, 707, 55, 13, 4 ]
+- NodeOutputName:  'resnetv10_stage2_conv4_weight__1:0'
+  Min:             -0.8431756496429443359375
+  Max:             0.878524959087371826171875
+  Histogram:       [ 8, 15, 70, 1350, 108157, 37200, 584, 51, 11, 10 ]
+- NodeOutputName:  'resnetv10_stage2_relu0_fwd__1:0'
+  Min:             0.0
+  Max:             2.6629016399383544921875
+  Histogram:       [ 87562, 9271, 2638, 662, 167, 39, 6, 4, 1, 2 ]
+- NodeOutputName:  'resnetv10_stage2_relu0_fwd__1_max:0'
+  Min:             0.0
+  Max:             2.6629016399383544921875
+  Histogram:       [ 87562, 9271, 2638, 662, 167, 39, 6, 4, 1, 2 ]
+- NodeOutputName:  'resnetv10_stage2_relu1_fwd__1:0'
+  Min:             0.0
+  Max:             3.2888753414154052734375
+  Histogram:       [ 95361, 4123, 678, 146, 32, 8, 2, 1, 0, 1 ]
+- NodeOutputName:  'resnetv10_stage2_relu1_fwd__1_max:0'
+  Min:             0.0
+  Max:             3.2888753414154052734375
+  Histogram:       [ 95361, 4123, 678, 146, 32, 8, 2, 1, 0, 1 ]
+- NodeOutputName:  'resnetv10_stage3__plus0__1:0'
+  Min:             -2.273584842681884765625
+  Max:             2.9248676300048828125
+  Histogram:       [ 51, 437, 3062, 16317, 24084, 5693, 432, 73, 18, 9 ]
+- NodeOutputName:  'resnetv10_stage3__plus1__1:0'
+  Min:             -3.2805483341217041015625
+  Max:             3.4873540401458740234375
+  Histogram:       [ 5, 67, 512, 4983, 32204, 11612, 721, 53, 14, 5 ]
+- NodeOutputName:  'resnetv10_stage3_activation0__1:0'
+  Min:             0.0
+  Max:             2.9248676300048828125
+  Histogram:       [ 42920, 5449, 1335, 304, 92, 41, 16, 8, 3, 8 ]
+- NodeOutputName:  'resnetv10_stage3_activation0__1_max:0'
+  Min:             0.0
+  Max:             2.9248676300048828125
+  Histogram:       [ 42920, 5449, 1335, 304, 92, 41, 16, 8, 3, 8 ]
+- NodeOutputName:  'resnetv10_stage3_activation1__1:0'
+  Min:             0.0
+  Max:             3.4873540401458740234375
+  Histogram:       [ 45435, 3640, 815, 197, 53, 16, 9, 6, 3, 2 ]
+- NodeOutputName:  'resnetv10_stage3_activation1__1_max:0'
+  Min:             0.0
+  Max:             3.4873540401458740234375
+  Histogram:       [ 45435, 3640, 815, 197, 53, 16, 9, 6, 3, 2 ]
+- NodeOutputName:  'resnetv10_stage3_conv0_fwd__2:0'
+  Min:             -2.384497165679931640625
+  Max:             2.34382915496826171875
+  Histogram:       [ 8, 34, 322, 5427, 27984, 14826, 1444, 113, 14, 4 ]
+- NodeOutputName:  'resnetv10_stage3_conv0_weight__1:0'
+  Min:             -0.22133429348468780517578125
+  Max:             0.2213440239429473876953125
+  Histogram:       [ 10, 36, 335, 4615, 151545, 133927, 3958, 392, 77,
+                     17 ]
+- NodeOutputName:  'resnetv10_stage3_conv1_fwd__2:0'
+  Min:             -2.127754688262939453125
+  Max:             3.1974813938140869140625
+  Histogram:       [ 30, 322, 3636, 24898, 19351, 1744, 144, 35, 11, 5 ]
+- NodeOutputName:  'resnetv10_stage3_conv1_weight__1:0'
+  Min:             -0.539150059223175048828125
+  Max:             0.71010673046112060546875
+  Histogram:       [ 5, 21, 312, 45318, 538692, 5178, 254, 33, 9, 2 ]
+- NodeOutputName:  'resnetv10_stage3_conv2_fwd__2:0'
+  Min:             -1.07173442840576171875
+  Max:             0.728359639644622802734375
+  Histogram:       [ 2, 18, 131, 903, 7609, 24366, 16318, 773, 50, 6 ]
+- NodeOutputName:  'resnetv10_stage3_conv2_weight__1:0'
+  Min:             -0.3310992419719696044921875
+  Max:             0.2969940006732940673828125
+  Histogram:       [ 4, 6, 47, 349, 6505, 24476, 1221, 129, 22, 9 ]
+- NodeOutputName:  'resnetv10_stage3_conv3_fwd__2:0'
+  Min:             -2.5621387958526611328125
+  Max:             1.97863924503326416015625
+  Histogram:       [ 3, 17, 363, 3449, 18423, 24149, 3522, 227, 20, 3 ]
+- NodeOutputName:  'resnetv10_stage3_conv3_weight__1:0'
+  Min:             -0.27186071872711181640625
+  Max:             0.3446066081523895263671875
+  Histogram:       [ 2, 35, 455, 41046, 534947, 12907, 391, 37, 2, 2 ]
+- NodeOutputName:  'resnetv10_stage3_conv4_fwd__2:0'
+  Min:             -3.2805483341217041015625
+  Max:             3.1288127899169921875
+  Histogram:       [ 5, 69, 446, 3567, 30222, 15417, 415, 26, 6, 3 ]
+- NodeOutputName:  'resnetv10_stage3_conv4_weight__1:0'
+  Min:             -0.6058404445648193359375
+  Max:             0.702017128467559814453125
+  Histogram:       [ 11, 52, 601, 18170, 528312, 41401, 1117, 125, 26,
+                     9 ]
+- NodeOutputName:  'resnetv10_stage3_relu0_fwd__1:0'
+  Min:             0.0
+  Max:             2.34382915496826171875
+  Histogram:       [ 44941, 3781, 1047, 281, 85, 23, 10, 4, 2, 2 ]
+- NodeOutputName:  'resnetv10_stage3_relu0_fwd__1_max:0'
+  Min:             0.0
+  Max:             2.34382915496826171875
+  Histogram:       [ 44941, 3781, 1047, 281, 85, 23, 10, 4, 2, 2 ]
+- NodeOutputName:  'resnetv10_stage3_relu1_fwd__1:0'
+  Min:             0.0
+  Max:             1.97863924503326416015625
+  Histogram:       [ 47153, 2199, 548, 176, 69, 19, 7, 2, 1, 2 ]
+- NodeOutputName:  'resnetv10_stage3_relu1_fwd__1_max:0'
+  Min:             0.0
+  Max:             1.97863924503326416015625
+  Histogram:       [ 47153, 2199, 548, 176, 69, 19, 7, 2, 1, 2 ]
+- NodeOutputName:  'resnetv10_stage4__plus0__1:0'
+  Min:             -4.48293018341064453125
+  Max:             6.348117828369140625
+  Histogram:       [ 6, 132, 2305, 15714, 6477, 392, 43, 15, 2, 2 ]
+- NodeOutputName:  'resnetv10_stage4__plus1__1:0'
+  Min:             -5.520687580108642578125
+  Max:             18.03270721435546875
+  Histogram:       [ 187, 4444, 17257, 2836, 310, 35, 11, 4, 2, 2 ]
+- NodeOutputName:  'resnetv10_stage4_activation0__1:0'
+  Min:             0.0
+  Max:             6.348117828369140625
+  Histogram:       [ 24172, 713, 134, 36, 15, 11, 3, 2, 1, 1 ]
+- NodeOutputName:  'resnetv10_stage4_activation0__1_max:0'
+  Min:             0.0
+  Max:             6.348117828369140625
+  Histogram:       [ 24172, 713, 134, 36, 15, 11, 3, 2, 1, 1 ]
+- NodeOutputName:  'resnetv10_stage4_activation1__1:0'
+  Min:             0.0
+  Max:             18.03270721435546875
+  Histogram:       [ 22574, 2061, 358, 61, 15, 11, 3, 1, 2, 2 ]
+- NodeOutputName:  'resnetv10_stage4_activation1__1_max:0'
+  Min:             0.0
+  Max:             18.03270721435546875
+  Histogram:       [ 22574, 2061, 358, 61, 15, 11, 3, 1, 2, 2 ]
+- NodeOutputName:  'resnetv10_stage4_conv0_fwd__2:0'
+  Min:             -2.179869174957275390625
+  Max:             2.8260610103607177734375
+  Histogram:       [ 11, 137, 1854, 13699, 8829, 508, 36, 9, 4, 1 ]
+- NodeOutputName:  'resnetv10_stage4_conv0_weight__1:0'
+  Min:             -0.17908759415149688720703125
+  Max:             0.3463118970394134521484375
+  Histogram:       [ 23, 448, 93655, 1.05530e+06, 29415, 715, 64, 15, 5,
+                     3 ]
+- NodeOutputName:  'resnetv10_stage4_conv1_fwd__2:0'
+  Min:             -4.58048343658447265625
+  Max:             5.95296478271484375
+  Histogram:       [ 1, 26, 608, 9079, 14500, 796, 52, 18, 7, 1 ]
+- NodeOutputName:  'resnetv10_stage4_conv1_weight__1:0'
+  Min:             -0.73804950714111328125
+  Max:             1.30837917327880859375
+  Histogram:       [ 12, 111, 22118, 2.22811e+06, 108004, 856, 67, 11,
+                     2, 4 ]
+- NodeOutputName:  'resnetv10_stage4_conv2_fwd__2:0'
+  Min:             -1.34252059459686279296875
+  Max:             1.1764962673187255859375
+  Histogram:       [ 9, 60, 467, 4561, 14114, 5271, 522, 70, 10, 4 ]
+- NodeOutputName:  'resnetv10_stage4_conv2_weight__1:0'
+  Min:             -1.07828366756439208984375
+  Max:             0.933195531368255615234375
+  Histogram:       [ 1, 1, 7, 49, 8424, 120924, 1625, 35, 4, 2 ]
+- NodeOutputName:  'resnetv10_stage4_conv3_fwd__2:0'
+  Min:             -3.6828262805938720703125
+  Max:             1.439801692962646484375
+  Histogram:       [ 12, 40, 130, 507, 1513, 5294, 13318, 4179, 89, 6 ]
+- NodeOutputName:  'resnetv10_stage4_conv3_weight__1:0'
+  Min:             -0.15687616169452667236328125
+  Max:             0.2508965432643890380859375
+  Histogram:       [ 11, 120, 19854, 1.77038e+06, 563713, 4917, 246, 47,
+                     6, 3 ]
+- NodeOutputName:  'resnetv10_stage4_conv4_fwd__2:0'
+  Min:             -5.520687580108642578125
+  Max:             13.12415599822998046875
+  Histogram:       [ 96, 1345, 11267, 10550, 1554, 221, 36, 9, 7, 3 ]
+- NodeOutputName:  'resnetv10_stage4_conv4_weight__1:0'
+  Min:             -4.827543735504150390625
+  Max:             4.323982715606689453125
+  Histogram:       [ 4, 5, 2, 43, 199215, 2.14334e+06, 15712, 787, 147,
+                     38 ]
+- NodeOutputName:  'resnetv10_stage4_relu0_fwd__1:0'
+  Min:             0.0
+  Max:             2.8260610103607177734375
+  Histogram:       [ 24385, 559, 97, 27, 8, 7, 2, 2, 0, 1 ]
+- NodeOutputName:  'resnetv10_stage4_relu0_fwd__1_max:0'
+  Min:             0.0
+  Max:             2.8260610103607177734375
+  Histogram:       [ 24385, 559, 97, 27, 8, 7, 2, 2, 0, 1 ]
+- NodeOutputName:  'resnetv10_stage4_relu1_fwd__1:0'
+  Min:             0.0
+  Max:             1.439801692962646484375
+  Histogram:       [ 24287, 540, 178, 50, 20, 6, 2, 2, 2, 1 ]
+- NodeOutputName:  'resnetv10_stage4_relu1_fwd__1_max:0'
+  Min:             0.0
+  Max:             1.439801692962646484375
+  Histogram:       [ 24287, 540, 178, 50, 20, 6, 2, 2, 2, 1 ]
+- NodeOutputName:  'zero:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 802816, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'zero__10:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 50176, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'zero__11:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 50176, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'zero__12:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 50176, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'zero__13:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 25088, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'zero__14:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 25088, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'zero__15:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 25088, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'zero__16:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 25088, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'zero__1:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 200704, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'zero__2:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 200704, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'zero__3:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 200704, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'zero__4:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 200704, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'zero__5:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 100352, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'zero__6:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 100352, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'zero__7:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 100352, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'zero__8:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 100352, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+- NodeOutputName:  'zero__9:0'
+  Min:             0.0
+  Max:             0.0
+  Histogram:       [ 50176, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+...
