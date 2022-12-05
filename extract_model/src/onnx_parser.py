@@ -40,6 +40,10 @@ def parse_args():
 
 
 def extract_model(onnx_path, yaml_dir_path, save_dir_path):
+
+    if not os.path.isdir(save_dir_path):
+        os.mkdir(save_dir_path)
+
     model = onnx.load(onnx_path)
     input_all = []
 
@@ -98,7 +102,13 @@ def extract_model(onnx_path, yaml_dir_path, save_dir_path):
 
 
 def read_onnx(onnx_path, extracted_onnx_path):
-    file_list = os.listdir(extracted_onnx_path)
+    if os.path.isdir(extracted_onnx_path):
+        file_list = os.listdir(extracted_onnx_path)
+    else:
+        os.mkdir(extracted_onnx_path)
+        file_list = os.listdir(extracted_onnx_path)
+
+
     file_list_onnx = [file for file in file_list if file.endswith(".onnx")]
 
     session = ort.InferenceSession(onnx_path, providers=['CPUExecutionProvider'])
