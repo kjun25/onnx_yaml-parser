@@ -144,10 +144,6 @@ GraphPreLowerHash: 0x8CDAD733AB6F3CF7
   Min:             0.0
   Max:             61.983509063720703125
   Histogram:       [ 789833, 10983, 861, 746, 62, 202, 5, 116, 5, 3 ]
-- NodeOutputName:  'resnetv24_relu1_fwd__1:0'
-  Min:             0.0
-  Max:             35.79693603515625
-  Histogram:       [ 93529, 4823, 1293, 465, 146, 49, 29, 9, 5, 4 ]
 - NodeOutputName:  'resnetv24_pool0_fwd__1:0'
   Min:             0.0
   Max:             61.983509063720703125
