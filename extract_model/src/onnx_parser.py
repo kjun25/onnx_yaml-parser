@@ -40,23 +40,31 @@ def parse_args():
 
 
 def extract_model(onnx_path, yaml_dir_path, save_dir_path):
-
     if not os.path.isdir(save_dir_path):
         os.mkdir(save_dir_path)
 
     model = onnx.load(onnx_path)
-    input_all = []
 
-    for input in model.graph.node:
-        input_all.append(input.input)
-    output_all = [output.name for output in model.graph.node]
+    input_node = [input.input for input in model.graph.node]
+    input_all = [node.name for node in model.graph.input]
+    input_initializer = [node.name for node in model.graph.initializer]
+    dic = {}
+    for t in [output for output in model.graph.node]:
+        dic[t.name] = t.output
+    output_all = []
+    for key, val in dic.items():
+        output_all.append(key)
+
+    net_feed_input = list(set(input_all) - set(input_initializer))
 
     file_list = os.listdir(yaml_dir_path)
     file_list_yaml = [file for file in file_list if file.endswith(".yaml")]
 
     # Read YAML data.
     print('Reading YAML file "%s"' % file_list_yaml)
+    flag = True
     data = None
+    temp = None
     for file in file_list_yaml:
         with open(yaml_dir_path + file, "r") as stream:
             try:
@@ -74,7 +82,7 @@ def extract_model(onnx_path, yaml_dir_path, save_dir_path):
                         splitValue2 = splitValue1.split(":0")[0]
                         partition.append(splitValue2)
             n = []
-            for i in input_all:
+            for i in input_node:
                 if list(set(i) & set(partition)):
                     n.append(i)
 
@@ -84,20 +92,28 @@ def extract_model(onnx_path, yaml_dir_path, save_dir_path):
                     m = i
 
             if output_all.index(m) > len(partition):
-                print('The index of a node "%d" cannot be greater than list size "%d"!' % (
-                    output_all.index(m), len(partition)))
+                print('Node names are duplicated in the yaml files.\n'
+                      'The index of a node "%d" cannot be greater than list size "%d"!' % (
+                          output_all.index(m), len(partition)))
                 exit(1)
 
             # Extract onnx model.
-            input_names = n[0]
-            output_names = [m]
-            print(input_names)
-            print(output_names)
+            if flag:
+                input_names = net_feed_input
+            else:
+                input_names = net_feed_input
+                input_names.append(temp)
+            output_names = dic[m]
+            print("Input Node: ", input_names, ", Output Node: ", output_names)
+
             try:
+                flag = False
+                temp = dic[m][0]
                 onnx.utils.extract_model(onnx_path, save_dir_path + file.split(".yaml")[0] + '.onnx',
                                          input_names, output_names)
+
             except onnx.onnx_cpp2py_export.checker.ValidationError as e:
-                print("pass validation error during exporting.")
+                # print("[warning] validation warning during exporting.")
                 pass
 
 
@@ -107,7 +123,6 @@ def read_onnx(onnx_path, extracted_onnx_path):
     else:
         os.mkdir(extracted_onnx_path)
         file_list = os.listdir(extracted_onnx_path)
-
 
     file_list_onnx = [file for file in file_list if file.endswith(".onnx")]
 
@@ -120,11 +135,22 @@ def read_onnx(onnx_path, extracted_onnx_path):
     data = np.ones(input_shape, dtype=float)
     data = data.astype(np.float32)
 
-    result = session.run([output_name], {input_name: data})
+    # result = session.run([output_name], {input_name: data})
+    result = session.run([output_name], {input_name: data})[0]
     sessions = []
     # ONNXRuntime functions
 
     for file in file_list_onnx:
+        # If "spatial = 0" does not work for "BatchNormalization", change "spatial=1"
+        # else comment this "if" condition
+        md = onnx.load(extracted_onnx_path + file)
+        for node in md.graph.node:
+            if node.op_type == "BatchNormalization":
+                for attr in node.attribute:
+                    if attr.name == "spatial":
+                        attr.i = 1
+        onnx.save(md, extracted_onnx_path + file)
+
         sess = ort.InferenceSession(extracted_onnx_path + file, providers=['CPUExecutionProvider'])
         sessions.append(sess)
 
@@ -133,11 +159,11 @@ def read_onnx(onnx_path, extracted_onnx_path):
         if sessions.index(sess) == 0:
             input_name = sess.get_inputs()[0].name
             output_name = sess.get_outputs()[0].name
-            result_data = sess.run([output_name], {input_name: data})
+            result_data = sess.run([output_name], {input_name: data})[0]
         else:
-            input_name = sess.get_inputs()[0].name
+            input_names = sess.get_inputs()
             output_name = sess.get_outputs()[0].name
-            result_data = sess.run([output_name], {input_name: result_data[0]})
+            result_data = sess.run([output_name], {input_names[0].name: data, input_names[1].name: result_data})[0]
 
     return result, result_data
 
@@ -153,8 +179,7 @@ def main(args):
 
     # Read ONNX models
     res1, res2 = read_onnx(args.onnx_file, args.save_dir)
-
-    print(np.count_nonzero((np.abs(res1[0] - res2[0]) > 0.000001).astype(int)) == 0)
+    print(np.count_nonzero((np.abs(res1 - res2) > 0.00001).astype(int)) == 0)
 
 
 if __name__ == '__main__':
