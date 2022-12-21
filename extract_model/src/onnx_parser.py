@@ -92,9 +92,9 @@ def extract_model(onnx_path, yaml_dir_path, save_dir_path):
                     m = i
 
             if output_all.index(m) > len(partition):
-                print('Node names are duplicated in the yaml files.\n'
-                      'The index of a node "%d" cannot be greater than list size "%d"!' % (
-                          output_all.index(m), len(partition)))
+                print('Node [{0}] is duplicated in the yaml files.\n'
+                      'The index of a node {1} cannot be greater than list size {2}!'
+                      .format(m, output_all.index(m), len(partition)))
                 exit(1)
 
             # Extract onnx model.
