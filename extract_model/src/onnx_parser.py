@@ -92,12 +92,6 @@ def extract_model(onnx_path, yaml_dir_path, save_dir_path):
                 if output_all.index(i) > output_all.index(m):
                     m = i
 
-            if output_all.index(m) > len(partition):
-                print('Node [{0}] is duplicated in the yaml files.\n'
-                      'The index of a node {1} cannot be greater than list size {2}!'
-                      .format(m, output_all.index(m), len(partition)))
-                exit(1)
-
             # Extract onnx model.
             if flag:
                 input_names = net_feed_input
@@ -161,11 +155,19 @@ def read_onnx(onnx_path, extracted_onnx_path):
         if sessions.index(sess) == 0:
             input_name = sess.get_inputs()[0].name
             output_name = sess.get_outputs()[0].name
-            result_data = sess.run([output_name], {input_name: data})[0]
+            data1 = sess.run([output_name], {input_name: data})[0]
         else:
             input_names = sess.get_inputs()
             output_name = sess.get_outputs()[0].name
-            result_data = sess.run([output_name], {input_names[0].name: data, input_names[1].name: result_data})[0]
+            if len(input_names) == 1:
+                result_data = sess.run([output_name], {input_names[0].name: data})[0]
+            elif len(input_names) == 2:
+                result_data = sess.run([output_name], {input_names[0].name: data,
+                                                       input_names[1].name: data1})[0]
+            elif len(input_names) == 3:
+                result_data = sess.run([output_name], {input_names[0].name: data,
+                                                       input_names[1].name: data1,
+                                                       input_names[2].name: result_data})[0]
 
     return result, result_data
 
@@ -181,7 +183,10 @@ def main(args):
 
     # Read ONNX models
     res1, res2 = read_onnx(args.onnx_file, args.save_dir)
-    print(np.count_nonzero((np.abs(res1 - res2) > 0.00001).astype(int)) == 0)
+    extractedOnnx = os.listdir(args.save_dir)
+
+    print('\nThe original onnx result and the extracted onnx {0} result is [{1}].'
+          .format(extractedOnnx, np.count_nonzero((np.abs(res1 - res2) > 0.00001).astype(int)) == 0))
 
 
 if __name__ == '__main__':
