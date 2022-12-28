@@ -1,0 +1,52 @@
+---
+GlowToolsVersion: 2020-10-02
+...
+---
+GraphPreLowerHash: 0x6274431C239E5185
+...
+---
+- NodeOutputName:  'resnetv10_stage1_activation1__1_max:0'
+  Min:             0.0
+  Max:             5.95215892791748046875
+  Histogram:       [ 127568, 56780, 12916, 2582, 636, 158, 47, 14, 1, 2 ]
+- NodeOutputName:  'resnetv10_stage2_conv0_weight__1:0'
+  Min:             -0.19011457264423370361328125
+  Max:             0.186677992343902587890625
+  Histogram:       [ 2, 8, 127, 1461, 32227, 38130, 1602, 153, 10, 8 ]
+- NodeOutputName:  'resnetv10_stage2_conv0_fwd__2:0'
+  Min:             -3.2811832427978515625
+  Max:             2.6629016399383544921875
+  Histogram:       [ 3, 8, 81, 1487, 17552, 69459, 11206, 532, 20, 4 ]
+- NodeOutputName:  'resnetv10_stage2_relu0_fwd__1:0'
+  Min:             0.0
+  Max:             2.6629016399383544921875
+  Histogram:       [ 87562, 9271, 2638, 662, 167, 39, 6, 4, 1, 2 ]
+- NodeOutputName:  'resnetv10_stage2_relu0_fwd__1_max:0'
+  Min:             0.0
+  Max:             2.6629016399383544921875
+  Histogram:       [ 87562, 9271, 2638, 662, 167, 39, 6, 4, 1, 2 ]
+- NodeOutputName:  'resnetv10_stage2_conv2_weight__1:0'
+  Min:             -0.450302183628082275390625
+  Max:             0.6479256153106689453125
+  Histogram:       [ 9, 23, 95, 2401, 5551, 91, 10, 10, 0, 2 ]
+- NodeOutputName:  'resnetv10_stage2_conv2_fwd__2:0'
+  Min:             -1.8159663677215576171875
+  Max:             1.84785556793212890625
+  Histogram:       [ 8, 37, 435, 5189, 54796, 37137, 2581, 156, 12, 1 ]
+- NodeOutputName:  'resnetv10_stage2_conv1_weight__1:0'
+  Min:             -0.53918850421905517578125
+  Max:             0.72789371013641357421875
+  Histogram:       [ 6, 50, 730, 21923, 121977, 2506, 225, 30, 5, 4 ]
+- NodeOutputName:  'resnetv10_stage2_conv1_fwd__2:0'
+  Min:             -2.5197460651397705078125
+  Max:             4.579153537750244140625
+  Histogram:       [ 32, 788, 15931, 69463, 13544, 545, 39, 7, 1, 2 ]
+- NodeOutputName:  'resnetv10_stage2__plus0__1:0'
+  Min:             -3.1520845890045166015625
+  Max:             6.035999298095703125
+  Histogram:       [ 27, 1065, 22548, 67683, 8792, 225, 10, 1, 0, 1 ]
+- NodeOutputName:  'resnetv10_stage2_activation0__1:0'
+  Min:             0.0
+  Max:             6.035999298095703125
+  Histogram:       [ 93782, 6044, 450, 66, 7, 1, 1, 0, 0, 1 ]
+...
