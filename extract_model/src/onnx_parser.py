@@ -59,6 +59,7 @@ def extract_model(onnx_path, yaml_dir_path, save_dir_path):
 
     file_list = os.listdir(yaml_dir_path)
     file_list_yaml = [file for file in file_list if file.endswith(".yaml")]
+    file_list_yaml.sort()
 
     # Read YAML data.
     print('Reading YAML file "%s"' % file_list_yaml)
@@ -125,6 +126,7 @@ def read_onnx(onnx_path, extracted_onnx_path):
         file_list = os.listdir(extracted_onnx_path)
 
     file_list_onnx = [file for file in file_list if file.endswith(".onnx")]
+    file_list_onnx.sort()
 
     session = ort.InferenceSession(onnx_path, providers=['CPUExecutionProvider'])
 
