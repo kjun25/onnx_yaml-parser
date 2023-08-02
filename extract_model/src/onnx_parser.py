@@ -127,7 +127,7 @@ def read_onnx(onnx_path, extracted_onnx_path):
     input_name = session.get_inputs()[0].name
     input_shape = session.get_inputs()[0].shape
     output_name = session.get_outputs()[0].name
-    #####batch_size 임의로 지정 (23_08_02)#####
+    #####batch_size --> 1 로 임의 지정 (23_08_02)#####
     if(input_shape[0]=="batch_size"):
     	input_shape[0]=1;
 
@@ -159,7 +159,7 @@ def read_onnx(onnx_path, extracted_onnx_path):
             input_name = sess.get_inputs()[0].name
             output_name = sess.get_outputs()[0].name
             data1 = sess.run([output_name], {input_name: data})[0]
-            #####result_data empty state 방지 (23_08_02)#####
+            #####result_data "empty state" 방지 (23_08_02)#####
             result_data = sess.run([output_name], {input_name: data})
         else:
             input_names = sess.get_inputs()
